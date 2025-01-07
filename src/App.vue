@@ -100,7 +100,7 @@
           </div>
         </template>
         <div class="tile border rounded p-3 m-2" style="grid-column: span 2; width: unset;">
-          <p>ジェム残り<strong>{{totalGems.length}}個</strong>({{ gameStatus }})</p>
+          <p>ジェム残り<strong>{{totalGems.length}}個</strong></p>
           <table  class="table table-bordered text-center">
             <tbody>
               <tr>
@@ -151,7 +151,7 @@
 export default {
   data() {
     return {
-      isDeveloping: true,
+      isDeveloping: false,
       modalShow: true, // Controls modal visibility
       totalGems: [],
       tiles: [],
@@ -162,7 +162,7 @@ export default {
         // { name: "Shin", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         { name: "Nozo", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         { name: "Becca", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
-        // { name: "Misaki", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
+        { name: "Misaki", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         // { name: "Minori", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
       ],
       gameStatus: 'registering',
@@ -460,6 +460,11 @@ export default {
 </script>
 
 <style>
+#app{
+  display: block;
+  widows: 100dvw;
+  height: 100dvh;
+}
 /* Modal styles */
 .modal-overlay {
   position: fixed;
@@ -625,9 +630,9 @@ export default {
 }
 
 .tiles .tile{
-  width: 175px;
+  width: 130px;
   height: auto;
-  padding: 1em;
+  padding: .5em !important;
   background-color: lightgrey;
 }
 
@@ -638,14 +643,14 @@ export default {
 .gems-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
   justify-content: center;
 }
 
 /* Common styles for gems */
 .gem {
   position: relative;
-  width: 25%;
+  width: 21%;
   aspect-ratio: 1;
   border: 1px solid black;
   /* transform: rotate(45deg); */
