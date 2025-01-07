@@ -108,7 +108,7 @@
                 <th><div><div>黄</div></div></th>
                 <th><div><div>赤</div></div></th>
                 <th><div><div>３つセット</div></div></th>
-                
+
               </tr>
               <tr>
                 <td><div>1</div></td>
@@ -162,7 +162,7 @@ export default {
         // { name: "Shin", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         { name: "Nozo", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         { name: "Becca", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
-        { name: "Misaki", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
+        // { name: "Misaki", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
         // { name: "Minori", tempVault: [], permanentVault: [], tempPicked: null, picked: null, finalScore: null  },
       ],
       gameStatus: 'registering',
@@ -187,8 +187,8 @@ export default {
         this.tiles.push([]);
       }
 
-      // let baseNum = 6
-      let baseNum = -1
+      let baseNum = 6
+      // let baseNum = -1
       
       let numDiff = (this.players.length - 2)
       baseNum = numDiff * 3 + baseNum
